@@ -1,0 +1,43 @@
+body {
+    background-color: #AFEEEE;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #039be5;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us {
+    display: flex;
+    color: whitesmoke;
+}
+
+.hero {
+    display: flex;
+    justify-content: wrap;
+    flex-wrap: wrap;
+    background-image: url(../images/alternateBackground.jpeg);
+    background-size: cover;
+    background-position: center;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+    color: whitesmoke;
+    }
+
+
+.hide-text {
+    opacity: 0.0;
+}
+
+
+            
