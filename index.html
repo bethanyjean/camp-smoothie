@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camp-Smoothie!!</title>
-    <link rel="stylesheet" href="./assets/css/style.css"/> 
+
+    
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <link rel="stylesheet" href="./assets/css/style.css" /> 
 
 </head>
 <body>
@@ -21,26 +28,107 @@
               <!-- List item element-->
               <li>
                 <!-- Anchor element -->
-                <a href="#ingredients">Ingredients</a>
+                <a href="./ingredients.html" style="font-size: 16px;">Ingredients</a>
               </li>
               <li>
-                <a href="#recipies">Recipies</a>
+                <a href="./recipes.html" style="font-size: 16px;">Recipes</a>
               </li>
               <li>
-                <a href="#favorites">Favorites</a>
+                <a href="./favorites.html" style="font-size: 16px;">Favorites</a>
               </li>
               <li>
-                <a href="#reachOut">Reach Out</a>
+                <a href="./contactUs.html" style="font-size: 16px;">Contact Us</a>
               </li>
             </ul>
           </nav>
     </header>
 
     <section class="hero">
-        <h2>Try it with a chicken leg!</h2>
+        
         <h2 id="swanson"></h2>
+    
+      <div class="hide-text">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatum eum eaque vero odit dicta illo eveniet rem!
+           Recusandae, non. Alias dolorum corrupti iure possimus et atque quod, quibusdam error?
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores qui molestiae distinctio 
+           quia, ex ad. Fugiat, ullam iusto sint aut sed, illo dicta voluptates soluta, nihil voluptate possimus facilis deleniti?
+        </p>
+      </div>
+      <div class="hide-text">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatum eum eaque vero odit dicta illo eveniet rem!
+           Recusandae, non. Alias dolorum corrupti iure possimus et atque quod, quibusdam error?
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores qui molestiae distinctio 
+           quia, ex ad. Fugiat, ullam iusto sint aut sed, illo dicta voluptates soluta, nihil voluptate possimus facilis deleniti?
+        </p>
+      </div>
+      <div class="hide-text">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatum eum eaque vero odit dicta illo eveniet rem!
+           Recusandae, non. Alias dolorum corrupti iure possimus et atque quod, quibusdam error?
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores qui molestiae distinctio 
+           quia, ex ad. Fugiat, ullam iusto sint aut sed, illo dicta voluptates soluta, nihil voluptate possimus facilis deleniti?
+        </p>
+      </div>
+        
     </section>
+
+    <!-- drag and drop begins -->
+    <section>
+  
+      <div class="example-parent">
+        <h1>Create Your Own Smoothie</h1>
+        <button id="Fruit-button">Fruit</button>
+        <button id="Base-button">Base</button>
+        <button id="Protein-supplements-button">Protein/Supplements</button>
+        <div id="fruitList" class="example-origin" style="display: none">
+          Add Your Ingredients
+          <div
+            id="draggable-1"
+            class="example-draggable"
+            draggable="true";
+          >
+            Strawberry
+          </div>
+          <div
+            id="draggable-2"
+            class="example-draggable";
+          >
+            Blueberry
+          </div>
+          <div
+            id="draggable-3"
+            class="example-draggable"
+            draggable="true";
+            
+          >
+            Mango
+          </div>
+          <div
+            id="draggable-4"
+            class="example-draggable"
+            draggable="true";
+            
+          >
+            Peach
+          </div>
+        </div>
+      
+        <div
+          class="example-dropzone"
+          id="smoothie"
+        >
+          Your Smoothie
+        </div>
+      </div>
+    </section>
+    <!-- drag and drop ends -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
+    
+
 </body>
 </html>
