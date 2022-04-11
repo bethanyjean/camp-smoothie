@@ -10,7 +10,6 @@
 
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <link rel="stylesheet" href="./assets/css/style.css" /> 
 
@@ -77,51 +76,83 @@
     <!-- drag and drop begins -->
     <section>
   
-      <div class="example-parent">
+      <div class="create">
         <h1>Create Your Own Smoothie</h1>
-        <button id="Fruit-button">Fruit</button>
+        <!-- <button id="Fruit-button">Fruit</button>
         <button id="Base-button">Base</button>
         <button id="Protein-supplements-button">Protein/Supplements</button>
-        <div id="fruitList" class="example-origin" style="display: none">
+        <button id="Close-list" style="display: none">Close List</button> -->
+
+        <!-- List of Fruit Ingredients -->
+        <h1>Add Your Ingredients</h1>
+        <ul id="fruitList" class="ingredient-list">
           Add Your Ingredients
-          <div
-            id="draggable-1"
-            class="example-draggable"
-            draggable="true";
-          >
+          <li id="draggable-1" class="draggable">
             Strawberry
-          </div>
-          <div
-            id="draggable-2"
-            class="example-draggable";
-          >
+            <img src="./assets/images/Strawberry.jpeg" alt="Strawberry" width="75" height="75">
+          </li>
+
+          <li id="draggable-2" class="draggable">
             Blueberry
-          </div>
-          <div
-            id="draggable-3"
-            class="example-draggable"
-            draggable="true";
-            
-          >
+            <img src="./assets/images/Blueberries.jpeg" alt="Blueberries" width="75" height="75">
+          </li>
+
+          <li id="draggable-3" class="draggable">
             Mango
-          </div>
-          <div
-            id="draggable-4"
-            class="example-draggable"
-            draggable="true";
-            
-          >
+            <img src="./assets/images/Mango.jpeg" alt="Mango" width="75" height="75">
+          </li>
+
+          <li id="draggable-4" class="draggable">
+            Pineapple
+            <img src="./assets/images/Pineapple.jpeg" alt="Pineapple" width="75" height="75">
+          </li>
+
+          <li id="draggable-5" class="draggable">
             Peach
-          </div>
-        </div>
-      
-        <div
-          class="example-dropzone"
-          id="smoothie"
-        >
+            <img src="./assets/images/Peaches.jpeg" alt="Peaches" width="75" height="75">
+          </li>
+
+          <li id="draggable-6" class="draggable">
+            Apple
+            <img src="./assets/images/Apples.jpeg" alt="Apple" width="75" height="75">
+          </li>
+
+        </ul>
+
+      <!-- List of Base Ingredients -->
+        <ul id="baseList" class="ingredient-list">
+          Add Your Ingredients
+          <li id="draggable-7" class="draggable">
+            Coconut Milk
+            <img src="./assets/images/Coconutmilk.jpeg" alt="Coconut Milk" width="75" height="75">
+          </li>
+
+          <li id="draggable-8" class="draggable">
+            Orange Juice
+            <img src="./assets/images/OrangeJuice.jpeg" alt="Orange Juice" width="75" height="75">
+          </li>
+        </ul>
+
+      <!-- List of Proteins/Supplements -->
+        <ul id="ptnsuppList" class="ingredient-list">
+          Add Your Ingredients
+          <li id="draggable-9" class="draggable">
+            Peanut Butter
+            <img src="./assets/images/PeanutButter.png" alt="Peanut Butter" width="75" height="75">
+          </li>
+        
+          <li id="draggable-10" class="draggable">
+           Pea Protein
+           <img src="./assets/images/PeaProtein.png" alt="Pea Protein" width="75" height="75">
+          </li>
+        </ul>
+
+        <ul class="dropzone" id="smoothie">
           Your Smoothie
-        </div>
+        </ul>
+        
       </div>
+      
     </section>
     <!-- drag and drop ends -->
 
