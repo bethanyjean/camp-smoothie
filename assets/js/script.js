@@ -80,7 +80,7 @@ var swanson = function() {
 //     baseList.style.display = "none"
 // })
 
-$(".draggable").draggable();
+ $(".draggable").draggable();
 
 $(".draggable").sortable( {
     connectWith: $(".ingredient-list"),
@@ -114,6 +114,8 @@ $("#smoothie").droppable({
         console.log(ingredient);
     }
 });
+
+
 
 
 
