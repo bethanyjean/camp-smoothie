@@ -100,7 +100,7 @@ nav {
     color: #039be5;
 }
 
-.example-parent {
+.create {
     border: 2px solid #DFA612;
     color: black;
     display: flex;
@@ -108,13 +108,13 @@ nav {
     font-weight: bold;
   }
   
-  .example-origin {
+.ingredient-list {
     flex-basis: 100%;
     flex-grow: 1;
     padding: 10px;
   }
   
-  .example-draggable {
+.draggable {
     background-color: #4AAE9B;
     font-weight: normal;
     margin-bottom: 10px;
@@ -122,12 +122,23 @@ nav {
     padding: 10px;
   }
   
-  .example-dropzone {
+.dropzone {
     background-color: #6DB65B;
     flex-basis: 100%;
     flex-grow: 1;
     padding: 10px;
   }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-            
+.dropover {
+    background: rgba(0,0,0,0.3);
+}
+
+.dropover-active {
+    background: #0f7aa5e6;
+}
