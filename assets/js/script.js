@@ -102,7 +102,7 @@ $(".draggable").sortable( {
     update: function() {
         var ingredient = $(this).textContent;
         console.log("Bloody hell" + ingredient); 
-    }
+    },
 });
 
 
