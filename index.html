@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camp-Smoothie!!</title>
+
+    
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <link rel="stylesheet" href="./assets/css/style.css" /> 
-    <script src="https://platform.fatsecret.com/js?key=a897f4240bf2465d9b6050fc49d098f0"></script> 
+
 </head>
 <body>
     <header>
@@ -14,31 +20,89 @@
             <a href="/">
               Camp-Smoothie
             </a>
-          </h1>
+        </h1>
           <nav>
             <!-- Unordered list element -->
             <ul>
               <!-- List item element-->
               <li>
                 <!-- Anchor element -->
-                <a href="#ingredients">Ingredients</a>
+                <a href="./ingredients.html" style="font-size: 16px;">Ingredients</a>
               </li>
               <li>
-                <a href="#recipies">Recipies</a>
+                <a href="./recipes.html" style="font-size: 16px;">Recipes</a>
               </li>
               <li>
-                <a href="#favorites">Favorites</a>
+                <a href="./favorites.html" style="font-size: 16px;">Favorites</a>
               </li>
               <li>
-                <a href="#reachOut">Reach Out</a>
+                <a href="./contactUs.html" style="font-size: 16px;">Contact Us</a>
               </li>
             </ul>
           </nav>
     </header>
 
     <section class="hero">
-        <h2>Try it with a chicken leg!</h2>
+      <h3>Create Your Own Smoothie</h3>
+        <h1 class = "swanson" id="swanson"></h1>
+        
     </section>
+
+    <!-- drag and drop begins -->
+    <main class="row">
+      <div class="col s12"><h2>Add Your Ingredients</h2></div>
+  
+
+      <div class="create row">
+
+          <!-- List of Fruit Ingredients -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Fruits</h2>
+              <ul id="list-fruit" class="ingredient-list collection">
+              </ul>
+            </div>
+          </div> 
+      
+
+          <!-- List of Base Ingredients -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Base</h2>
+              <ul id="list-base" class="ingredient-list collection">
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- List of Proteins/Supplements -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Protein and Supplements</h2>
+              <ul id="list-ptnsupp" class="ingredient-list collection">
+              </ul>
+            </div>
+          </div>
+        
+
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Smoothie</h2>
+              <ul id="list-smoothie" class="dropzone ingredient-list collection">
+              </ul>
+            </div>
+          </div>
+      
+      </div>
+
+      
+    </main>
+    <!-- drag and drop ends -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
     
+
 </body>
 </html>
