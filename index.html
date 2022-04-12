@@ -20,7 +20,7 @@
             <a href="/">
               Camp-Smoothie
             </a>
-          </h1>
+        </h1>
           <nav>
             <!-- Unordered list element -->
             <ul>
@@ -49,66 +49,79 @@
     </section>
 
     <!-- drag and drop begins -->
-    <section class="card">
+    <main class="row">
+      <div class="col s12"><h2>Add Your Ingredients</h2></div>
   
-      <div class="create">
-        
-        <!-- <button id="Fruit-button">Fruit</button>
-        <button id="Base-button">Base</button>
-        <button id="Protein-supplements-button">Protein/Supplements</button>
-        <button id="Close-list" style="display: none">Close List</button> -->
 
-        <!-- List of Fruit Ingredients -->
-        <h1>Add Your Ingredients</h1>
+      <div class="create row">
 
-
-        <ul id="fruitList" class="ingredient-list card">
-          Fruits
-          <li id="draggable-1" class="draggable">
-            Strawberry
-          </li>
-        
-          <li id="draggable-2" class="draggable">
-            Blueberry
-          </li>
-        
-          <li id="draggable-3" class="draggable">
-            Mango
-          </li>
-        </ul>
-
-      <!-- List of Base Ingredients -->
-        <ul id="baseList" class="ingredient-list card">
-          Base
-          <li id="draggable-7" class="draggable">
-            Coconut Milk
-          </li>
-
-          <li id="draggable-8" class="draggable">
-            Orange Juice
-          </li>
-        </ul>
-
-      <!-- List of Proteins/Supplements -->
-      <ul id="ptnsuppList" class="ingredient-list card">
-        Protein and Supplements
-        <li id="draggable-9" class="draggable">
-          Peanut Butter
-        </li>
+          <!-- List of Fruit Ingredients -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Fruits</h2>
+              <ul id="fruitList" class="ingredient-list">
+                <li id="draggable-1" class="draggable">
+                  Strawberry
+                </li>
+              
+                <li id="draggable-2" class="draggable">
+                  Blueberry
+                </li>
+              
+                <li id="draggable-3" class="draggable">
+                  Mango
+                </li>
+              </ul>
+            </div>
+          </div> 
       
-        <li id="draggable-10" class="draggable">
-         Pea Protein
-        </li>
-      </ul>
 
-      <ul class="dropzone card" id="smoothie">
-        Your Smoothie
-      </ul>
+          <!-- List of Base Ingredients -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Base</h2>
+              <ul id="baseList" class="ingredient-list">
+                <li id="draggable-7" class="draggable">
+                  Coconut Milk
+                </li>
+
+                <li id="draggable-8" class="draggable">
+                  Orange Juice
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- List of Proteins/Supplements -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Protein and Supplements</h2>
+              <ul id="ptnsuppList" class="ingredient-list">
+                <li id="draggable-9" class="draggable">
+                  Peanut Butter
+                </li>
+              
+                <li id="draggable-10" class="draggable">
+                  Pea Protein
+                </li>
+              </ul>
+            </div>
+          </div>
+        
+
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <h2>Smoothie</h2>
+              <ul class="dropzone card" id="smoothie">
+              </ul>
+            </div>
+          </div>
       
-    </div>
+      </div>
 
       
-    </section>
+    </main>
     <!-- drag and drop ends -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
