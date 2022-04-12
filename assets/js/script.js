@@ -2,9 +2,9 @@
 var ninjaKey = "o+av+xqRbo9t4LzpYZYrTg==BIM0Nl0wB5X2Kmk1";
 // var newSmoothie = {};
 var ingredients = {
-    fruit: ["strawberry", "banana", "apple"],
-    base: ["coconut milk", "orange juice"],
-    ptnsupp: ["pea protein", "Peanut Butter"],
+    fruit: ["strawberry", "banana", "apple", "blueberry", "mango"],
+    base: ["almond milk","coconut milk", "orange juice"],
+    ptnsupp: ["pea protein", "Peanut Butter", "Whey Protein"],
     smoothie: ["poison"],
 };
 
@@ -95,6 +95,8 @@ $(".card .ingredient-list").sortable({
            ingredients[smoothie] = tempArr;
         }
 });
+
+
 
 var saveSmoothie = function() {
     localStorage.setItem("smoothie", JSON.stringify(newSmoothie))
