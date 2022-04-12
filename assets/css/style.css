@@ -112,7 +112,7 @@ nav {
     padding: 10px;
   }
   
-.draggable {
+.list-item {
     background-color: #4AAE9B;
     font-weight: normal;
     margin-bottom: 10px;
@@ -125,12 +125,16 @@ nav {
     flex-basis: 100%;
     flex-grow: 1;
     padding: 10px;
-  }
+}
 
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.ingredient {
+    color:#ffffff;
 }
 
 .dropover {
@@ -139,4 +143,12 @@ ul {
 
 .dropover-active {
     background: #0f7aa5e6;
+}
+
+.swanson {
+    text-transform: uppercase;
+    text-decoration: wavy;
+    font-weight: 900;
+    font-size: xx-large;
+    color:#38fa08;
 }
