@@ -152,3 +152,25 @@ ul {
     font-size: xx-large;
     color:#039be5;
 }
+
+.col_pic {
+    background-color:#DFA612;
+    width: 20%; 
+}
+
+.col_nutrition {
+  color:#ee6e73;
+  font-style: italic;
+  width: 20%; 
+
+}
+
+.col_ingredients {
+  color:#ee6e73; 
+  font-style: italic;
+  width: 20%; 
+
+}
+.row {
+    color: #ee6e73
+    
