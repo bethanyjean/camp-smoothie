@@ -5,8 +5,13 @@ var ingredients = {
     fruit: ["strawberry", "banana", "apple", "blueberry", "mango"],
     base: ["almond milk","coconut milk", "orange juice"],
     ptnsupp: ["pea protein", "Peanut Butter", "Whey Protein"],
-    smoothie: ["poison"],
+    smoothie: [],
 };
+var calories = 0;
+var protein = 0;
+var carbs = 0;
+var fat = 0;
+
 
 
 
@@ -15,16 +20,14 @@ var swanson = function() {
     var swansonUrl = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
 
     fetch(swansonUrl).then(function(response) {
-        console.log(response);
         response.json().then(function(data) {
-          console.log(data);
           $("#swanson").append(data);
         });
     });
 };
 
 
-// var query = '3lb carrots and a chicken sandwich'
+// var query = "'3lb carrots and a chicken sandwich'"
 // $.ajax({
 //     method: 'GET',
 //     url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
@@ -37,6 +40,42 @@ var swanson = function() {
 //         console.error('Error: ', jqXHR.responseText);
 //     }
 // });
+
+
+
+var createNutrition = function(calories, protein, carbs, fat){
+        $("#calories").text("Calories " + calories);
+        $("#protein").text("Protein " + protein);
+        $("#fat").text("Fat " + fat);
+        $("#carbs").text("Carbs " + carbs);
+};
+
+$("#nutrition-button").click(function(){
+    var tempArr = ingredients.smoothie;
+    $.each(tempArr, function(index, text){
+        console.log(text);
+        console.log(text.text);
+        $.ajax({
+            method: 'GET',
+            url: 'https://api.calorieninjas.com/v1/nutrition?query=' + text.text,
+            headers: { 'X-Api-Key': ninjaKey},
+            contentType: 'application/json',
+            success: function(result) {
+                console.log("Calories " + result.items[0].calories);
+                calories += result.items[0].calories;
+                protein += result.items[0].protein_g;
+                carbs += result.items[0].carbohydrates_total_g;
+                fat += result.items[0].fat_total_g;
+                createNutrition(calories, protein, carbs, fat);
+            },
+            error: function ajaxError(jqXHR) {
+                console.error('Error: ', jqXHR.responseText);
+            }
+        }); 
+    });
+     
+});
+
 
 swanson();
 
@@ -87,20 +126,19 @@ $(".card .ingredient-list").sortable({
                     // save values in temp array
                     tempArr.push({
                         text: $(this)
-                        .find("p")
+                        .find("span")
                         .text()
                         .trim(),
                     });
                 });
-           ingredients[smoothie] = tempArr;
+           ingredients.smoothie=tempArr;
         }
 });
 
-
-
-var saveSmoothie = function() {
-    localStorage.setItem("smoothie", JSON.stringify(newSmoothie))
-};
+// var saveSmoothie = function() {
+//     localStorage.setItem("smoothie", JSON.stringify(newSmoothie))
+// };
 
 loadIngredients();
+
 
