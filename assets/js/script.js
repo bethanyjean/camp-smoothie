@@ -15,7 +15,7 @@ var fat = 0;
 
 
 
-
+//retrieve Ron Swanson quote
 var swanson = function() {
     var swansonUrl = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
 
@@ -27,22 +27,9 @@ var swanson = function() {
 };
 
 
-// var query = "'3lb carrots and a chicken sandwich'"
-// $.ajax({
-//     method: 'GET',
-//     url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
-//     headers: { 'X-Api-Key': ninjaKey},
-//     contentType: 'application/json',
-//     success: function(result) {
-//         console.log(result);
-//     },
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     }
-// });
 
 
-
+//take the nutritional information for the smoothie and display it.
 var createNutrition = function(calories, protein, carbs, fat){
         $("#calories").text("Calories " + calories);
         $("#protein").text("Protein " + protein);
@@ -50,16 +37,19 @@ var createNutrition = function(calories, protein, carbs, fat){
         $("#carbs").text("Carbs " + carbs);
 };
 
+
+//when the nutrition button is clicked, calculate the nutrition
 $("#nutrition-button").click(function(){
+    //set a temp array to store the ingredients
     var tempArr = ingredients.smoothie;
+    //loop over the array and go to calorie ninja to retrieve the nutritional data
     $.each(tempArr, function(index, text){
-        console.log(text);
-        console.log(text.text);
         $.ajax({
             method: 'GET',
             url: 'https://api.calorieninjas.com/v1/nutrition?query=' + text.text,
             headers: { 'X-Api-Key': ninjaKey},
             contentType: 'application/json',
+            //If the call is sucessful, add all of the nutritional data together
             success: function(result) {
                 console.log("Calories " + result.items[0].calories);
                 calories += result.items[0].calories;
@@ -77,7 +67,6 @@ $("#nutrition-button").click(function(){
 });
 
 
-swanson();
 
 var createIngredient = function(ingredientText, ingredientList) {
     var ingredientLi = $("<li>").addClass("list-item");
@@ -139,6 +128,10 @@ $(".card .ingredient-list").sortable({
 //     localStorage.setItem("smoothie", JSON.stringify(newSmoothie))
 // };
 
+
+//call teh function to load all the ingredients into the proper containers
 loadIngredients();
+swanson();
+
 
 
