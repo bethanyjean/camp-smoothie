@@ -1,6 +1,6 @@
 
 var ninjaKey = "o+av+xqRbo9t4LzpYZYrTg==BIM0Nl0wB5X2Kmk1";
-// var newSmoothie = {};
+var savedSmoothie = {};
 var ingredients = {
     fruit: ["strawberry", "banana", "apple", "blueberry", "mango"],
     base: ["almond milk","coconut milk", "orange juice"],
@@ -11,6 +11,7 @@ var calories = 0;
 var protein = 0;
 var carbs = 0;
 var fat = 0;
+
 
 
 
@@ -93,6 +94,7 @@ $(".card .ingredient-list").sortable({
     scroll: false,
     tolerance: "pointer",
     helper: "clone",
+    
     activate: function(event, ui){
         $(this).addClass("dropover");
     },
@@ -124,14 +126,23 @@ $(".card .ingredient-list").sortable({
         }
 });
 
-// var saveSmoothie = function() {
-//     localStorage.setItem("smoothie", JSON.stringify(newSmoothie))
-// };
+$("#save-button").click(function() {
+    localStorage.setItem("savedSmoothie", JSON.stringify(ingredients.smoothie));
+});
 
+var loadFavorite = function() {
+    for (let i = 0; i < savedSmoothie.length; i++) {
+        createIngredient(savedSmoothie[i].text, "favorite");
+    }
+}
 
-//call teh function to load all the ingredients into the proper containers
+//load saved smoothie from local storage
+var loadSavedSmoothie = function() {
+    savedSmoothie = JSON.parse(localStorage.getItem("savedSmoothie"));
+    loadFavorite();
+}
+
+//call the function to load all the ingredients into the proper containers
+loadSavedSmoothie();
 loadIngredients();
 swanson();
-
-
-
