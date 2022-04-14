@@ -148,6 +148,7 @@ var loadSavedSmoothie = function() {
 }
 
 //call the function to load all the ingredients into the proper containers
-loadSavedSmoothie();
+
 loadIngredients();
 swanson();
+loadSavedSmoothie();
