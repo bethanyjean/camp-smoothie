@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #AFEEEE;
 }
@@ -102,6 +106,7 @@ nav {
     border: 2px solid #DFA612;
     color: black;
     display: flex;
+    flex-wrap: wrap;
     font-family: sans-serif;
     font-weight: bold;
   }
@@ -138,7 +143,7 @@ ul {
 }
 
 .dropover {
-    background: rgba(0,0,0,0.3);
+    background: #a7ffeb teal accent-1;
 }
 
 .dropover-active {
@@ -150,5 +155,39 @@ ul {
     text-decoration: wavy;
     font-weight: 900;
     font-size: xx-large;
-    color:#38fa08;
+    color:#039be5;
+}
+
+
+.col_pic {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.col_nutrition {
+  color:#ee6e73;
+  font-style: italic;
+  font-size: medium;
+
+}
+
+.col_ingredients { 
+  color:#ee6e73; 
+  font-style: italic;
+}
+
+.picture-container {
+    width:100%;
+}
+
+@media screen and (min-width: 1300px){
+}
+
+.row {
+  color: #ee6e73;
+}
+
+.nutrition_facts {
+    color: #039be5;
+    padding-left: 30px; 
 }
