@@ -139,7 +139,8 @@ var loadFavorite = function() {
 //load saved smoothie from local storage
 var loadSavedSmoothie = function() {
     savedSmoothie = JSON.parse(localStorage.getItem("savedSmoothie"));
-    if (!savedSmoothie) {
+    console.log(savedSmoothie);
+    if (!savedSmoothie[0]) {
         console.log("There are no favorites here.");
     } else {
     loadFavorite();
