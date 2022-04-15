@@ -139,7 +139,6 @@ var loadFavorite = function() {
 //load saved smoothie from local storage
 var loadSavedSmoothie = function() {
     savedSmoothie = JSON.parse(localStorage.getItem("savedSmoothie"));
-    console.log(savedSmoothie);
     if (!savedSmoothie[0]) {
         console.log("There are no favorites here.");
     } else {
@@ -148,6 +147,7 @@ var loadSavedSmoothie = function() {
 }
 
 //call the function to load all the ingredients into the proper containers
-loadSavedSmoothie();
+
 loadIngredients();
 swanson();
+loadSavedSmoothie();
