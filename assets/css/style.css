@@ -39,6 +39,22 @@ nav {
     opacity: 0.0;
 }
 
+h2 {
+    color: #039be5;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color:#039be5;
+}
+
+.smoothie {
+    color: #ffe0b2;
+}
+
 /* contact us styles start */
 
 .contact h2 {
@@ -126,10 +142,12 @@ nav {
   }
   
 .dropzone {
-    background-color: #6DB65B;
+    background-color: #4AAE9B;
     flex-basis: 100%;
     flex-grow: 1;
     padding: 10px;
+    height: 325px;
+    width: auto;
 }
 
 ul {
@@ -140,6 +158,7 @@ ul {
 
 .ingredient {
     color:#ffffff;
+    font-size: 22px;
 }
 
 .dropover {
@@ -161,7 +180,6 @@ ul {
 
 .col_pic {
     width: 100%;
-    padding-left: 30px;
 }
 
 .col_nutrition {
@@ -179,6 +197,37 @@ ul {
 .picture-container {
     width:100%;
 }
+
+.buttons-div {
+    text-align: center;
+    font-size: 25px;
+}
+
+.nutrition-button {
+    border-radius: 10px;
+}
+
+.card {
+    height: 400px;
+    width: auto;
+    background-color: #4AAE9B;
+    border-radius: 10px;
+}
+
+.nutrition-card {
+    height: 350px;
+    width: auto;
+}
+
+/*.container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  } */
+
 
 @media screen and (min-width: 1300px){
 }

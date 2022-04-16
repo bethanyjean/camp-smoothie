@@ -4,7 +4,7 @@ var ninjaKey = "o+av+xqRbo9t4LzpYZYrTg==BIM0Nl0wB5X2Kmk1";
 var savedSmoothie = {};
 var ingredients = {
     fruit: ["Strawberry", "Banana", "Peach", "Blueberry", "Mango"],
-    base: ["Almond milk","Coconut milk", "Orange juice", "Pineapple juice", "Chocolate milK"],
+    base: ["Almond milk","Coconut milk", "Orange juice", "Pineapple juice", "Chocolate milk"],
     ptnsupp: ["Pea protein", "Peanut Butter", "Whey Protein", "Flax seed", "Honey"],
     smoothie: [],
 };
@@ -149,7 +149,8 @@ var loadFavorite = function() {
 //load saved smoothie from local storage
 var loadSavedSmoothie = function() {
     savedSmoothie = JSON.parse(localStorage.getItem("savedSmoothie"));
-    if (!savedSmoothie[0]) {
+    console.log(savedSmoothie);
+    if (savedSmoothie==null) {
         console.log("There are no favorites here.");
     } else {
     loadFavorite();
