@@ -39,6 +39,7 @@ var createNutrition = function(calories, protein, carbs, fat){
 };
 
 
+
 //when the nutrition button is clicked, calculate the nutrition
 $("#nutrition-button").click(function(){
     //set a temp array to store the ingredients
@@ -50,13 +51,17 @@ $("#nutrition-button").click(function(){
             url: 'https://api.calorieninjas.com/v1/nutrition?query=' + text.text,
             headers: { 'X-Api-Key': ninjaKey},
             contentType: 'application/json',
-            //If the call is sucessful, add all of the nutritional data together
+            //If the call is sucessful, add all of the nutritional data together and rounds to nearest whole number
             success: function(result) {
                 console.log("Calories " + result.items[0].calories);
                 calories += result.items[0].calories;
+                calories=calories.toFixed(0);
                 protein += result.items[0].protein_g;
+                protein=protein.toFixed(0);
                 carbs += result.items[0].carbohydrates_total_g;
+                carbs=carbs.toFixed(0);
                 fat += result.items[0].fat_total_g;
+                fat=fat.toFixed(0);
                 createNutrition(calories, protein, carbs, fat);
             },
             error: function ajaxError(jqXHR) {
