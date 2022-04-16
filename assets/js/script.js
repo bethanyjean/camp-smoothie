@@ -63,6 +63,7 @@ $("#nutrition-button").click(function(){
                 fat += result.items[0].fat_total_g;
                 fat=fat.toFixed(0);
                 createNutrition(calories, protein, carbs, fat);
+                
             },
             error: function ajaxError(jqXHR) {
                 console.error('Error: ', jqXHR.responseText);
