@@ -1,12 +1,14 @@
-
+//key needed for the API
 var ninjaKey = "o+av+xqRbo9t4LzpYZYrTg==BIM0Nl0wB5X2Kmk1";
+//variable to save local storage of favorite smoothie
 var savedSmoothie = {};
 var ingredients = {
-    fruit: ["strawberry", "banana", "apple", "blueberry", "mango"],
-    base: ["almond milk","coconut milk", "orange juice"],
-    ptnsupp: ["pea protein", "Peanut Butter", "Whey Protein"],
+    fruit: ["Strawberry", "Banana", "Peach", "Blueberry", "Mango"],
+    base: ["Almond milk","Coconut milk", "Orange juice", "Pineapple juice", "Chocolate milK"],
+    ptnsupp: ["Pea protein", "Peanut Butter", "Whey Protein", "Flax seed", "Honey"],
     smoothie: [],
 };
+//Variables for the addition of the nutrition facts
 var calories = 0;
 var protein = 0;
 var carbs = 0;
@@ -16,7 +18,7 @@ var fat = 0;
 
 
 
-//retrieve Ron Swanson quote
+//retrieve Ron Swanson quote for favorties page
 var swanson = function() {
     var swansonUrl = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
 
@@ -68,7 +70,8 @@ $("#nutrition-button").click(function(){
 });
 
 
-
+// dynamically adds each of the ingredients to the proper card/ingredient list. allows for additiona
+//     ingredients to be added in the varibale declaration
 var createIngredient = function(ingredientText, ingredientList) {
     var ingredientLi = $("<li>").addClass("list-item");
     var ingredientP = $("<span>")
@@ -78,6 +81,7 @@ var createIngredient = function(ingredientText, ingredientList) {
     $("#list-" + ingredientList).append(ingredientLi);
 };
 
+//loops through each array in the ingredints object to add to the proper list
 var loadIngredients = function() {
     $.each(ingredients, function(list, arr){
         arr.forEach(function(ingredient){
@@ -86,15 +90,14 @@ var loadIngredients = function() {
     });
 };
 
-// $(".ingredient-list").draggable();
-
+// makes the ingredient lists draggable to enable them to be added to the smoothie
 $(".card .ingredient-list").sortable({
-    //enable across ingredient-lists
+    //only allow the smoothie list to accept dropped items
     connectWith: $("#list-smoothie"),
     scroll: false,
     tolerance: "pointer",
     helper: "clone",
-    
+    //when an item is dragged, the target changes color
     activate: function(event, ui){
         $(this).addClass("dropover");
     },
@@ -107,6 +110,8 @@ $(".card .ingredient-list").sortable({
     out: function(event) {
         $(event.target).removeClass("dropover-active");
     },
+        //when the item is dropped, all of the lists will update with the smoothie list
+        //containing the additional item and it being removed from its ingredient list
       update: function() {
         var tempArr = [];
 
@@ -122,14 +127,19 @@ $(".card .ingredient-list").sortable({
                         .trim(),
                     });
                 });
+                //the smoothie list now contains all the new ingredients
            ingredients.smoothie=tempArr;
         }
 });
 
+
+//saves all the ingredients of the favorite smoothie to local storage
 $("#save-button").click(function() {
     localStorage.setItem("savedSmoothie", JSON.stringify(ingredients.smoothie));
 });
 
+
+//loads the favorite ingredient from saved smoothie array and loads it on the favorites tab
 var loadFavorite = function() {
     for (let i = 0; i < savedSmoothie.length; i++) {
         createIngredient(savedSmoothie[i].text, "favorite");
@@ -147,7 +157,8 @@ var loadSavedSmoothie = function() {
 }
 
 //call the function to load all the ingredients into the proper containers
-
 loadIngredients();
+//call the function to display Ron Swanson quote
 swanson();
+//call the function to load the saved smoothie to the favorites page
 loadSavedSmoothie();
