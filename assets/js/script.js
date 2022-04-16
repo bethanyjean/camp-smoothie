@@ -142,6 +142,7 @@ $(".card .ingredient-list").sortable({
 //saves all the ingredients of the favorite smoothie to local storage
 $("#save-button").click(function() {
     localStorage.setItem("savedSmoothie", JSON.stringify(ingredients.smoothie));
+    location.href = 'https://bethanyjean.github.io/camp-smoothie/favorites.html';
 });
 
 

@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/*main html styling*/
+
 body {
     background-color: #AFEEEE;
 }
@@ -118,6 +120,7 @@ h4 {
     color: #039be5;
 }
 
+/*smoothie styles*/
 .create {
     border: 2px solid #DFA612;
     color: black;
@@ -125,13 +128,13 @@ h4 {
     flex-wrap: wrap;
     font-family: sans-serif;
     font-weight: bold;
-  }
+}
   
 .ingredient-list {
     flex-basis: 100%;
     flex-grow: 1;
     padding: 10px;
-  }
+}
   
 .list-item {
     background-color: #4AAE9B;
@@ -139,7 +142,7 @@ h4 {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 10px;
-  }
+}
   
 .dropzone {
     background-color: #4AAE9B;
@@ -219,15 +222,28 @@ ul {
     width: auto;
 }
 
-/*.container {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  } */
+.recipie-card {
+    height:fit-content;
+    width:fit-content;
+    background-color:#e0f2f1;
+    border-radius: 10px;
+    border-color: #ee6e73;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top:20px;
+    align-items: center;
+}
 
+.recipie-card > row {
+    display: inline-flex;
+}
+
+.recipie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (min-width: 1300px){
 }
