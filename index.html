@@ -72,7 +72,9 @@
 
     <!-- drag and drop begins -->
     <main class="row">
-      <div class="col s12"><h2>Add Your Ingredients</h2></div>
+      <div class="col s12"><h2>Add Your Ingredients</h2>
+      <h4>(Drag individual ingredients to smoothie section)</h4>
+      </div>
   
 
       <div class="create row">
@@ -80,7 +82,7 @@
           <!-- List of Fruit Ingredients -->
           <div class="col s12 m6 l3">
             <div class="card">
-              <h2>Fruits</h2>
+              <h3>Fruits</h3>
               <ul id="list-fruit" class="ingredient-list collection">
               </ul>
             </div>
@@ -90,7 +92,7 @@
           <!-- List of Base Ingredients -->
           <div class="col s12 m6 l3">
             <div class="card">
-              <h2>Base</h2>
+              <h3>Base</h3>
               <ul id="list-base" class="ingredient-list collection">
               </ul>
             </div>
@@ -100,7 +102,7 @@
           <!-- List of Proteins/Supplements -->
           <div class="col s12 m6 l3">
             <div class="card">
-              <h2>Protein and Supplements</h2>
+              <h3>Supplements</h3>
               <ul id="list-ptnsupp" class="ingredient-list collection">
               </ul>
             </div>
@@ -109,7 +111,7 @@
 
           <div class="col s12 m6 l3">
             <div class="card">
-              <h2>Smoothie</h2>
+              <h3 class="smoothie">Smoothie</h3>
               <ul id="list-smoothie" class="dropzone ingredient-list collection">
               </ul>
             </div>
@@ -121,12 +123,13 @@
     </main>
     <!-- drag and drop ends -->
 
-    <div>
+    <div class="buttons-div">
       
-      <button id="nutrition-button" class="nutrition-button">Calculate Nutrition</button>
+      <button id="nutrition-button" class="nutrition-button hover">Calculate Nutrition</button>
+      <button id="save-button" class="nutrition-button hover">Save Smoothie</button>
 
       <div class="nutrition_facts col s4">
-            <div class="card">
+            <div class="nutrition-card">
               <h2>Nutrition Facts</h2>
               <ul id="nutrition">
                 <li id="calories"></li>
@@ -136,7 +139,6 @@
               </ul>
             </div>
           </div>
-          <button id="save-button" class="nutrition-button">Save Smoothie</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

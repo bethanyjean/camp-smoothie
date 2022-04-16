@@ -2,9 +2,9 @@
 var ninjaKey = "o+av+xqRbo9t4LzpYZYrTg==BIM0Nl0wB5X2Kmk1";
 var savedSmoothie = {};
 var ingredients = {
-    fruit: ["strawberry", "banana", "apple", "blueberry", "mango"],
-    base: ["almond milk","coconut milk", "orange juice"],
-    ptnsupp: ["pea protein", "Peanut Butter", "Whey Protein"],
+    fruit: ["Strawberry", "Banana", "Peach", "Blueberry", "Mango"],
+    base: ["Almond milk","Coconut milk", "Orange juice", "Pineapple juice", "Chocolate milk"],
+    ptnsupp: ["Pea protein", "Peanut Butter", "Whey Protein", "Flax seed", "Honey"],
     smoothie: [],
 };
 var calories = 0;
