@@ -57,13 +57,13 @@ $("#nutrition-button").click(function(){
             success: function(result) {
                 console.log("Calories " + result.items[0].calories);
                 calories += result.items[0].calories;
-                calories=calories.toFixed(0);
+                calories= Math.round(calories);
                 protein += result.items[0].protein_g;
-                protein=protein.toFixed(0);
+                protein=Math.round(protein);
                 carbs += result.items[0].carbohydrates_total_g;
-                carbs=carbs.toFixed(0);
+                carbs=Math.round(carbs);
                 fat += result.items[0].fat_total_g;
-                fat=fat.toFixed(0);
+                fat=Math.round(fat);
                 createNutrition(calories, protein, carbs, fat);
                 
             },
@@ -142,7 +142,7 @@ $(".card .ingredient-list").sortable({
 //saves all the ingredients of the favorite smoothie to local storage
 $("#save-button").click(function() {
     localStorage.setItem("savedSmoothie", JSON.stringify(ingredients.smoothie));
-    location.href = 'https://bethanyjean.github.io/camp-smoothie/favorites.html';
+    location.href = './favorites.html';
 });
 
 
