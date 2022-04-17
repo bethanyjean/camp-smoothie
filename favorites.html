@@ -7,6 +7,7 @@
     <title>Favorites</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" /> 
+    <link rel= "shortcut icon" type = "image" href="./assets/images/favicon.png"/>
 </head>
 <body>
     <header>
@@ -14,33 +15,36 @@
             Favorites
         </h1>
     </header>
-    <nav>
-        <!-- Unordered list element -->
-        <ul>
-          <!-- List item element-->
-          <li>
-            <!-- Anchor element -->
-            <a href="./index.html" style="font-size: 16px;">Homepage</a>
-          </li>
-          <li>
-            <a href="./recipes.html" style="font-size: 16px;">Recipes</a>
-          </li>
-          <li>
-            <a href="./ingredients.html" style="font-size: 16px;">Ingredients</a>
-          </li>
-          <li>
-            <a href="./contactUs.html" style="font-size: 16px;">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
 
+    <nav>
+      <!-- Unordered list element -->
+      <ul>
+        <!-- List item element-->
+        <li>
+          <!-- Anchor element -->
+          <a href="./index.html" style="font-size: 16px;">Homepage</a>
+        </li>
+        <li>
+          <a href="./recipes.html" style="font-size: 16px;">Recipes</a>
+        </li>
+        <li>
+          <a href="./ingredients.html" style="font-size: 16px;">Ingredients</a>
+        </li>
+        <li>
+          <a href="./contactUs.html" style="font-size: 16px;">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+      <!-- Ron Swanson Quote -->
       <section>
-          <h3>Quote of the Day - by Ron Swanson</h3>
+          <h2>Quote of the Day - by Ron Swanson</h2>
         <h1 class = "swanson" id="swanson"></h1>
       </section>
 
+      <!-- Favorite Smoothie loaded dynamically from local storage -->
       <div class="card">
-        <h2>Your Favorite Smoothie</h2>
+        <h2 class="smoothie">Your Favorite Smoothie</h2>
         <ul id="list-favorite" class="dropzone ingredient-list collection">
         </ul>
       </div>
