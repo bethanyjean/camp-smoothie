@@ -9,6 +9,8 @@ This group project focused on creating and executing a web application with team
 • JavaScript
 • JQuery
 • Materialize
+• Fruit Ninja API
+• Ron Swanson quote generator API
 
 
 # Website
